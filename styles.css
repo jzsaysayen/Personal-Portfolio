@@ -1,0 +1,263 @@
+/* Reset some default styles */
+body, h1, h2, p, ul {
+    margin: 0;
+    padding: 0;
+}
+
+/* Set a background color and font for the body */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Container for the entire portfolio */
+.container {
+    max-width: 1200px; /* Increase max-width for a wider layout */
+    margin: 0 auto;
+    padding: 20px;
+    background: #fff;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+}
+
+/* Profile section styles */
+.profile {
+    display: flex; /* Use flexbox for layout */
+    align-items: center; /* Center items vertically */
+    margin-bottom: 20px;
+}
+
+.profile img {
+    width: 250px;
+    height: 350px;
+    border-radius: 10%;
+    border: 0px;;
+    margin-right: 20px; /* Space between image and text */
+}
+
+.profile-text {
+    display: flex;
+    flex-direction: column; /* Stack h1 and p vertically */
+}
+
+.profile h1 {
+    font-size: 8em;
+    margin: 0; /* Remove margin for better alignment */
+}
+
+.profile p {
+    font-size: 1.2em;
+    color: #555;
+}
+
+/* Section styles */
+.section {
+    margin: 20px 0;
+}
+
+.section h2 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+    color: #007BFF;
+}
+
+.section p {
+    line-height: 1.6;
+}
+
+.section ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.section ul li {
+    background: #e9ecef;
+    margin: 5px 0;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Contact section styles */
+.section p {
+    font-size: 1em;
+    color: #555;
+}
+
+/* About Me and skills & tools Container */
+.info-section {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space between the two sections */
+    margin: 20px 0; /* Add margin for spacing */
+}
+
+.about-me, .skills-tools {
+    flex: 1; /* Allow both sections to take equal space */
+    margin: 0 10px; /* Add margin for spacing between columns */
+    border: 1px solid #ccc; /* Add border for separation */
+    border-radius: 20px; /* Add border radius for rounded corners */
+    padding: 20px; /* Add padding for content */
+}
+
+.about-me h2, .skills-tools h2 {
+    font-size: 1.5em; /* Consistent heading size */
+}
+
+.about-me p, .skills-tools p {
+    line-height: 1.6; /* Maintain line height for readability */
+}
+
+.sliding-section { /* https://www.youtube.com/watch?v=mF9yOwlunWk&t=529s */
+    width: 100%;
+    height: var(--height);
+    overflow: hidden;
+    mask-image: linear-gradient(
+        to right, 
+        transparent, 
+        black 10% 90%, 
+        transparent
+    )
+}
+
+.sliding-section .list { 
+    display: flex;
+    width: 100%;
+    min-width: calc(var(--width) * var(--quantity));
+    position: relative;
+}
+
+.sliding-section .list .item {
+    width: var(--width);
+    height: var(--height);
+    position: absolute;
+    left: 100%;
+    animation: autoRun 10s linear infinite;
+    animation-delay: calc( (10s / var(--quantity)) * (var(--position) - 1 ));
+}
+
+.sliding-section .list .item img {
+    width: 100%;
+    height: 100%;
+}
+
+@keyframes autoRun {
+    from{
+        left: 100%;
+    }to{
+        left: calc(var(--width) * -1);
+    }
+} /* https://www.youtube.com/watch?v=mF9yOwlunWk&t=529s */
+
+.project-section {
+    margin: 20px 0;
+    padding: 20px;
+    border: 1px solid #ccc; /* Add border for separation */
+    border-radius: 20px; /* Add border radius for rounded corners */
+}
+.projects {
+    display: flex;
+    flex-direction: column; /* Stack projects vertically */
+    gap: 20px; /* Space between the projects */
+}
+
+.project {
+    display: flex; /* Use flexbox for the project container */
+    justify-content: space-between; /* Space between left and right content */
+    align-items: flex-start; /* Align items to the start */
+    width: 100%; /* Make the project take the full width */
+    border: 1px solid #ccc; /* Add a border for better visibility */
+    border-radius: 10px; /* Add a border radius for rounded corners */
+    padding: 10px; /*  Add some padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for depth */
+}
+
+.project-text {
+    flex: 1; /* Allow the content to take available space */
+}
+
+.preview {
+    height: 300px; /* Set a fixed height for the iframe */
+    width: 600px; /* Set a fixed width for the preview */
+    overflow: hidden; /* Hide overflow */
+}
+
+iframe {
+    height: 100%; /* Make the iframe take the full height of the preview div */
+    width: 100%; /* Make the iframe take the full width of the preview div */
+    border: none; /* Remove default border */
+}
+
+footer {
+    background-color: #333; /* Dark background color */
+    color: #fff; /* White text color */
+    padding: 20px; /* Padding around the footer */
+    text-align: center; /* Center align text */
+}
+
+.footer-content {
+    max-width: 800px; /* Max width for the content */
+    margin: 0 auto; /* Center the footer content */
+}
+
+.footer-content h3 {
+    margin-bottom: 10px; /* Space below the heading */
+}
+
+.footer-content p {
+    margin: 5px 0; /* Space between paragraphs */
+}
+
+.footer-content a {
+    color: #fff; /* White text color for links */
+    text-decoration: none; /* Remove underline from links */
+}
+.socials {
+    margin-top: 10px; /* Space above social links */
+}
+
+.socials a {
+    color: #fff; /* White text color for links */
+    margin: 0 10px; /* Space between social links */
+    text-decoration: none; /* Remove underline from links */
+}
+
+.socials a:hover {
+    text-decoration: underline; /* Underline on hover */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .profile {
+        flex-direction: column; /* Stack image and text vertically on smaller screens */
+        align-items: flex-start; /* Align items to the start */
+    }
+
+    .profile img {
+        margin-bottom: 15px; /* Add space below the image */
+    }
+
+    .profile-text {
+        align-items: flex-start; /* Align text to the start */
+    }
+
+    .profile h1 {
+        font-size: 1.5em; /* Adjust font size for smaller screens */
+    }
+
+    .profile p {
+        font-size: 1em; /* Adjust font size for smaller screens */
+    }
+
+    .about-uc-container {
+        flex-direction: column; /* Stack columns on smaller screens */
+    }
+
+    .about-me, .uc-details {
+        margin: 0; /* Remove margin for stacked layout */
+        width: 100%; /* Full width for each section */
+    }
+
+    .section h2 {
+        font-size: 1.3em; /* Adjust section heading size */
+    }
+}
