@@ -103,7 +103,7 @@ body {
     font-size: 1.5em; /* Consistent heading size */
 }
 
-.about-me p, .skills-tools p {
+.about-me p, .skills-tools p .project-text p {
     line-height: 1.6; /* Maintain line height for readability */
 }
 
@@ -169,22 +169,38 @@ body {
     border-radius: 10px; /* Add a border radius for rounded corners */
     padding: 10px; /*  Add some padding */
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow for depth */
+    padding-left: 20px;
+}
+
+.projects a {
+    color: #007BFF; /* Blue text color for links */
+    text-decoration: none; /* Remove underline from links */
+    padding: 2px 5px; /* Add padding around the link */
 }
 
 .project-text {
+    /*border: 1px solid #ccc; /* for checking space */
+    padding-right: 20px;
     flex: 1; /* Allow the content to take available space */
+}
+
+.project-text p {
+    line-height: 1.6;
 }
 
 .preview {
     height: 300px; /* Set a fixed height for the iframe */
     width: 600px; /* Set a fixed width for the preview */
-    overflow: hidden; /* Hide overflow */
+    overflow: hidden;
 }
 
-iframe {
-    height: 100%; /* Make the iframe take the full height of the preview div */
-    width: 100%; /* Make the iframe take the full width of the preview div */
-    border: none; /* Remove default border */
+.preview img {
+    width: 100%; /* Make the image take the full width of the preview div */
+    height: 100%; /* Make the image take the full height of the preview div */
+    object-fit: cover; /* Cover the entire preview div */
+    object-position: center; /* Center the image in the preview div */
+    border-radius: 15px; /* Remove default border */
+    border: 1px solid #ccc; /* Add a border for separation */
 }
 
 footer {
